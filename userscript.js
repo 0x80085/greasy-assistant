@@ -16,6 +16,50 @@
 // more emotions
 // more stuff to think about
 
+// pseudo code
+ // Function to send input to Ollama and get a response
+ /*
+async function getResponse(input) {
+    const prompt = `
+    Please respond with a JSON object in the following format:
+    {
+        "event": "smile" or "sad",
+        "text": "Your response text here."
+    }
+    Input: "${input}"
+    `;
+
+    try {
+        const response = await fetch('http://localhost:8000/ollama', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ prompt: prompt })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            if (data.event && data.text) {
+                return data;
+            } else {
+                console.error('Invalid response format:', data);
+                return null;
+            }
+        } else {
+            console.error('Error:', response.statusText);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+*/
+
+
+    
+
 
 (function() {
     'use strict';
